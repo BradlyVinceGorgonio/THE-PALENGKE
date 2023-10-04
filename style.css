@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #FAAC64;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.popup-form {
+    display: none;
+    margin-top: 7px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 20%;
+    max-height: 50%;
+    background-color: #FFE3B7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333; /* Change the color as needed */
+}
+
+nav{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    background: #FAAC64;
+    width: 20   0px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .nav-item{
+
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: -830px;
+    margin-left: 1050px;
+}
+
+
+.dropdown-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style the sorting options */
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+/* Change the sorting option styles on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
