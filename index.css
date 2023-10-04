@@ -2,8 +2,14 @@ body {
     margin: 0;
     padding: 0;
 }
+.profile-button
+{
 
+    margin-right: 50px;
+}
 .navbar {
+    width: 100%;
+    position: fixed;
     background-color: #FAAC64;
     display: flex;
     justify-content: space-between;
@@ -11,6 +17,7 @@ body {
     padding: 10px 20px;
 }
 .search-bar {
+    position: relative;
     display: flex;
     align-items: center;
     margin-left: 500px;
@@ -48,7 +55,7 @@ input[type="text"] {
     color: #333; /* Change the color as needed */
 }
 nav{
-    position: relative;
+    position: fixed;
     top: 0;
     bottom: 0;
     height: 100vh;
@@ -64,6 +71,7 @@ nav{
 }
 
 .dropdown {
+    
     position: relative;
     display: inline-block;
     margin-top: -830px;
@@ -103,22 +111,23 @@ nav{
 }
 
 
-.card-container
-{
-    margin-left: 30%;
-    margin-top: -50%;
+.card-container {
+    margin-top: 5%;
+    margin-left: 15%;
     display: flex;
-    flex-direction:column;
+    flex-wrap: wrap; /* This allows cards to wrap to the next row */
     gap: 1rem;
     align-items: flex-start;
-
+    justify-content: flex-start; /* Optional: Align the cards to the left */
 }
-.card
-{
+
+.card {
+    height: 400px;
+    width: 300px;
     background: white;
     border: 1px solid black;
     border-radius: .25rem;
     padding: .5rem;
-    transform: translateX(100px);
+    margin: .5rem; /* Add margin to create space between cards */
     transition: 150ms;
 }
