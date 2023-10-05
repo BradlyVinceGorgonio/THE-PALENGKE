@@ -119,6 +119,7 @@ nav{
 
 /* Style the dropdown content */
 .dropdown-content {
+    
     display: none;
     position: absolute;
     background-color: #fff;
@@ -158,7 +159,7 @@ nav{
 .card-container {
     
     margin-top: 1%;
-    margin-left: 15%;
+    margin-left: 20%;
     display: flex;
     flex-wrap: wrap; /* This allows cards to wrap to the next row */
     gap: 1rem;
@@ -193,3 +194,66 @@ nav{
     font-size: 20px; /* Icon size */
 }
 
+#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+#popup
+{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 626px;
+    flex-shrink: 0;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5;
+    border-radius: 8px;
+
+
+    
+
+}
+#popup.active
+{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
+}
+
+.custom-form {
+    display: flex;
+    height: 28px;
+    padding: 12px 12px 12px 12px; /* Adjust padding as needed */
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(--neutral-gray-b-4-b-4-b-4, #B4B4B4);
+    width: 500px; /* Adjust the width of the container as needed */
+}
+
+.custom-form i.fa-envelope {
+    color: var(--neutral-gray-717171, #717171);
+    font-size: 16px; /* Adjust the size as needed */
+    margin-right: 10px; /* Add some spacing between the icon and text */
+}
+
+.custom-form input[type="text"] {
+    color: var(--neutral-gray-717171, #717171);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    width: 100%; /* Make the input expand to the width of its parent container */
+    border: none;
+    outline: none;
+    background: transparent;
+}
