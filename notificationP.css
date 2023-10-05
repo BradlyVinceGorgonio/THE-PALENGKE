@@ -24,6 +24,22 @@
     min-width: 40px;
 
 }
+.circle {
+  width: 40px;
+  height: 40px;
+  margin-right: 5%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0); /* Icon color */
+  cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+}
+
+.circle i {
+  font-size: 20px; /* Icon size */
+}
 
 .input-field {
     width: 100%;

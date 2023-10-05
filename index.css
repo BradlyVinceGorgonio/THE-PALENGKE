@@ -243,7 +243,7 @@ nav{
 .custom-form i.fa-envelope {
     color: var(--neutral-gray-717171, #717171);
     font-size: 16px; /* Adjust the size as needed */
-    margin-right: 10px; /* Add some spacing between the icon and text */
+    margin-right: 15px; /* Add some spacing between the icon and text */
 }
 
 .custom-form input[type="text"] {
