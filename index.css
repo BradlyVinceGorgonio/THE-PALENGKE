@@ -1,4 +1,5 @@
 body {
+    background-color: #DDEEDF;
     margin: 0;
     padding: 0;
 }
@@ -7,15 +8,7 @@ body {
 
     margin-right: 50px;
 }
-.navbar {
-    width: 100%;
-    position: fixed;
-    background-color: #FAAC64;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
+
 .search-bar {
     position: relative;
     display: flex;
@@ -64,27 +57,77 @@ nav{
     width: 200px;
     overflow: hidden;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    width: 15rem;
+    height: 100vh;
+    background-color: #FAAC64;
+    
+}
+.navbar-nav
+{
+    list-style: none; /* Add this line to remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    background-color: #FAAC64;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
 }
 .nav-item{
-    margin-top: 50px;
-    margin-left: 0px;
+    width: 100%;
 }
+.nav-link
+{
+    justify-content: center; /* Center horizontally */
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition:600ms;
+}
+.nav-link:hover
+{
+    filter: grayscale(0%) opacity(1);
+    background:  #1e1e24;
+    color: var(--text-primary);
+}
+
+
+
+
 
 .dropdown {
     
     position: relative;
     display: inline-block;
-    margin-top: -830px;
-    margin-left: 1050px;
+    margin-top: 5%;
+    margin-left: 90%;
 }
 
 
 .dropdown-button {
-    background-color: #333;
-    color: white;
+    background: var(--White, #FFF); /* Use CSS variable or fallback to #FFF */
+    color: #0C0C0C;
     padding: 10px;
     border: none;
+    border-radius: 8px; /* Add border-radius */
     cursor: pointer;
+    /* Add box-shadow property */
+    box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+    
 }
 
 /* Style the dropdown content */
@@ -112,7 +155,8 @@ nav{
 
 
 .card-container {
-    margin-top: 5%;
+    
+    margin-top: 1%;
     margin-left: 15%;
     display: flex;
     flex-wrap: wrap; /* This allows cards to wrap to the next row */
