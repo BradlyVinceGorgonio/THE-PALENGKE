@@ -14,62 +14,7 @@
     </head>
 <body>
 
-<div class="bodycontent">
-    <h1 style="margin-top: 155px; margin-left: 400px;" >Notification</h1>
-    <p style="margin-top: -15px; margin-left: 400px;">Manage your notification settings</p>
-    <i class="fa fa-envelope" aria-hidden="true" style="margin-top: 25px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Emails</p></i>
-    <p style="margin-top: -5px; margin-left: 400px;">We write emails to let you know<br> what's important, like: new order,<br> confirmations</p>
- 
- 
-    <div style="margin-left: 800px; margin-top: -100px;">
-        <i class="fa fa-truck" aria-hidden="true">
-            <p style="margin-top: -15px; margin-left: 20px;"> Order Delivered</p>
-        </i>
-        <p style="margin-top: -5px;">You will be noticed once <br>the order is delivered</p>
-    </div>
 
-
-<i class="fa fa-envelope-open" aria-hidden="true" style="margin-top: 100px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Push to your Device</p></i>
-    <p style="margin-top: -5px; margin-left: 400px;"> Recieve notification about your order <br>status, promotions and other updates</p>
-
-    <div style="margin-left: 800px; margin-top: -80px;">
-        <i class="fa fa-life-ring" aria-hidden="true"><p style="margin-top: -15px; margin-left: 20px;">Product's availability</p></i>
-        <p style="margin-top: -5px;">You will be noticed when <br>product gets available</p>
-    </div>
-
-
-<div style="margin-left: 680px; margin-top: -90px;">
-<label class="switch">
-    <input type="checkbox" checked>
-    <span class="slider round"></span>
-  </label>
-</div>
-
-
-    <div style="margin-left: 680px; margin-top: -210px;">
-        <label class="switch">
-            <input type="checkbox" checked>
-            <span class="slider round"></span>
-        </label>
-    </div>
-
-    <div style="margin-left: 1060px; margin-top: 140px;">
-        <label class="switch">
-            <input type="checkbox" checked>
-            <span class="slider round"></span>
-          </label>
-        </div>
-        
-        
-        <div style="margin-left: 1060px; margin-top: -210px;">
-            <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider round"></span>
-              </label>
-            </div>
-        
-
-</div>
 
 
 
@@ -89,20 +34,21 @@
         <i class="fa fa-shopping-basket icon"style="font-size: 20px;"></i>Orders
     </a>
 
-    <a href="#" >
-        <i class="fa fa-bell icon"style="font-size: 25px; color: orange; text-color: #FAAC64"></i>Notification
-    </a>
-
-    <a href="#">
-        <i class="fa fa-sellsy icon" style="font-size: 20px;"></i>Start Selling
-    </a>
+    <div class="menu-item">
+        <a href="#" onclick="showForm('form1')">
+            <i class="fa fa-bell icon" style="font-size: 25px; color: orange;"></i>Notification
+        </a>
+    </div>
+        <div class="menu-item" onclick="showForm('form2')">
+            <a href="#">
+            <i class="fa fa-sellsy icon" style="font-size: 20px;"></i>Start Selling
+        </a>
+    </div>
     <a href="#">
         <i class="fa fa-sign-out icon"style="font-size: 20px;"></i>Log Out
     </a>
 </div>
 </div>
-
-
 
 
 <div class="navbar">
@@ -118,6 +64,111 @@
 
 </div>
    
+
+
+
+<div id="content">
+    <div id="form1" style="display: none;">
+
+        <div class="bodycontent">
+            <div style="margin-left: -370px; margin-top: -50px;">
+            <h1 style="margin-top: 155px; margin-left: 400px;" >Notification</h1>
+            <p style="margin-top: -15px; margin-left: 400px;">Manage your notification settings</p>
+            <i class="fa fa-envelope" aria-hidden="true" style="margin-top: 25px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Emails</p></i>
+            <p style="margin-top: -5px; margin-left: 400px;">We write emails to let you know<br> what's important, like: new order,<br> confirmations</p>
+         
+         
+            <div style="margin-left: 800px; margin-top: -100px;">
+                <i class="fa fa-truck" aria-hidden="true">
+                    <p style="margin-top: -15px; margin-left: 20px;">Order Delivered</p>
+                </i>
+                <p style="margin-top: -5px;">You will be noticed once <br>the order is delivered</p>
+            </div>
+        
+        
+        <i class="fa fa-envelope-open" aria-hidden="true" style="margin-top: 100px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Push to your Device</p></i>
+            <p style="margin-top: -5px; margin-left: 400px;"> Recieve notification about your order <br>status, promotions and other updates</p>
+        
+            <div style="margin-left: 800px; margin-top: -80px;">
+                <i class="fa fa-life-ring" aria-hidden="true"><p style="margin-top: -15px; margin-left: 20px;">Product's availability</p></i>
+                <p style="margin-top: -5px;">You will be noticed when <br>product gets available</p>
+            </div>
+        
+        
+        <div style="margin-left: 680px; margin-top: -90px;">
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        
+        
+            <div style="margin-left: 680px; margin-top: -210px;">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        
+            <div style="margin-left: 1060px; margin-top: 140px;">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                
+                
+                <div style="margin-left: 1060px; margin-top: -210px;">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                
+        
+        </div>
+
+    </div>
+
+
+
+
+
+
+    </div>
+
+    <div id="form2" style="display: none;">
+        <div class="bodycontent">
+            <form class="form">
+            </form>
+            <div class="formin">
+<h1>ADD PHOTO</h1>
+            </div>
+            <form class="formin1">
+    <i class="fa fa-upload" aria-hidden="true" style="font-size: 30px; margin-left: 20px; margin-top: 10px;">
+      <button class="button">
+        UPLOAD</button></i>
+           </form>
+   
+           <div class="selling">
+           <input type="text" placeholder="TITLE" class="selling-i"><br><br><br>
+           <input type="text" placeholder="PRICE" class="selling-i"><br><br><br>
+           <input type="text" placeholder="CATEGORY" class="selling-i"><br><br><br>
+           <textarea placeholder="DESCRIPTION" class="selling-i" style="height: 300px;"></textarea>
+        </div>
+        </div>
+
+
+
+    </div>
+<script>
+    function showForm(formId) {
+        document.querySelectorAll('#content > div').forEach((form) => {
+            form.style.display = 'none';
+        });
+        document.getElementById(formId).style.display = 'block';
+    }
+</script>
 
 
 
