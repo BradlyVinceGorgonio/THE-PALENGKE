@@ -19,7 +19,9 @@
 
 
 <div class="sidenav">
+    
     <div class="list">
+        <div id="navigate">Home > Notification </div>
 
     <a href="personaldata.html" style="font-size: 35px;">
 
@@ -170,13 +172,12 @@
     }
 </script>
 
+<script>
+    const titlepage = document.title;
 
-
-
-
-
-        <div id="navigate">Home > Notification</div>
-        <script src="scriptfornavigation.js"></script>
+    const navigate = document.getElementById('navigate');
+    navigate.textContent = `Home > ${titlepage}`;
+</script>
 
 
 </body>
