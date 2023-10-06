@@ -35,8 +35,9 @@ function toggle()
 {
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
+    
 
-    var popup = document.getElementById('popup');
+    var popup = document.getElementById('container');
     popup.classList.toggle('active');
 
 }
@@ -45,9 +46,11 @@ const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
 registerBtn.addEventListener('click', () => {
+    
     container.classList.add("active");
 });
 
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
+
 });

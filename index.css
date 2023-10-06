@@ -231,40 +231,7 @@ nav{
     font-size: 20px; /* Icon size */
 }
 
-#blur.active{
-    filter: blur(20px);
-    pointer-events: none;
-    user-select: none;
-}
-#popup
-{
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 600px;
-    height: 626px;
-    flex-shrink: 0;
-    padding: 50px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5;
-    border-radius: 8px;
-    
 
-
-    
-
-}
-#popup.active
-{
-    top: 50%;
-    visibility: visible;
-    opacity: 1;
-    transform: 0.5s;
-}
 
 .custom-form {
     display: flex;
@@ -297,37 +264,84 @@ nav{
     background: transparent;
 }
 
-
-.container{
+#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+#popup.active
+{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transform: 0.5s;
+}
+#popup
+{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 626px;
+    flex-shrink: 0;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5;
+    border-radius: 8px;
+}
+#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+#container {
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    position: relative;
+    position: fixed;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.5s; /* Only transition opacity */
 }
 
-.container p{
+#container.active {
+    visibility: visible; /* Make the div visible when active */
+    opacity: 1;
+    transition: opacity 0.5s; /* Transition opacity */
+}
+
+
+
+#container p{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
-.container span{
+#container span{
     font-size: 12px;
 }
 
-.container a{
+#container a{
     color: #333;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-.container button{
+#container button{
     background-color: #000000;
     color: #fff;
     font-size: 12px;
@@ -341,12 +355,12 @@ nav{
     cursor: pointer;
 }
 
-.container button.hidden{
+#container button.hidden{
     background-color: transparent;
     border-color: #fff;
 }
 
-.container form{
+#container form{
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -356,7 +370,7 @@ nav{
     height: 100%;
 }
 
-.container input{
+#container input{
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -380,7 +394,7 @@ nav{
     z-index: 2;
 }
 
-.container.active .sign-in{
+#container.active .sign-in{
     transform: translateX(100%);
 }
 
@@ -391,7 +405,7 @@ nav{
     z-index: 1;
 }
 
-.container.active .sign-up{
+#container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -436,7 +450,7 @@ nav{
     z-index: 1000;
 }
 
-.container.active .toggle-container{
+#container.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
@@ -454,7 +468,7 @@ nav{
     transition: all 0.6s ease-in-out;
 }
 
-.container.active .toggle{
+#container.active .toggle{
     transform: translateX(50%);
 }
 
@@ -477,7 +491,7 @@ nav{
     transform: translateX(-200%);
 }
 
-.container.active .toggle-left{
+#container.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -486,6 +500,6 @@ nav{
     transform: translateX(0);
 }
 
-.container.active .toggle-right{
+#container.active .toggle-right{
     transform: translateX(200%);
 }
