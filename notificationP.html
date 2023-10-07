@@ -48,10 +48,11 @@
     </div>
 
 
-        <a href="#">
+    <div class="menu-item">
+        <a href="#" onclick="showForm('form4')">
             <i class="fa fa-heart icon" style="font-size: 20px;"></i> Wishlist
         </a>
-
+    </div>
 
         <div class="menu-item" onclick="showForm('form2')">
             <a href="#">
@@ -284,6 +285,155 @@
     </div>
 
 
+
+
+
+
+
+    <div id="form4" style="display: none;">
+        <div class="bodycontent">
+
+
+            <div class="card-container">
+                <div class="card">
+                    
+                    <div class="product-image"></div>
+                    <div class="text-container">
+                        <div class="product-name">Product Name</div>
+                        <div class="product-price">₱ 75.00</div>
+                        <div class="product-rating">4.5 stars (1000+ reviews)</div>
+                        <div class="action-buttons">
+                            <button id="addToCartBtn" class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                            <button id="removeFromCartBtn" class="remove-from-cart" style="display: none;">Added to Cart <i class="fas fa-trash"></i></button>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image"></div>
+                    <div class="text-container">
+                        <div class="product-name">Product Name</div>
+                        <div class="product-price">₱ 75.00</div>
+                        <div class="product-rating">4.5 stars (1000+ reviews)</div>
+                        <div class="action-buttons">
+                            <button id="addToCartBtn" class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                            <button id="removeFromCartBtn" class="remove-from-cart" style="display: none;">Added to Cart <i class="fas fa-trash"></i></button>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image"></div>
+                    <div class="text-container">
+                        <div class="product-name">Product Name</div>
+                        <div class="product-price">₱ 75.00</div>
+                        <div class="product-rating">4.5 stars (1000+ reviews)</div>
+                        <div class="action-buttons">
+                            <button id="addToCartBtn" class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                            <button id="removeFromCartBtn" class="remove-from-cart" style="display: none;">Added to Cart <i class="fas fa-trash"></i></button>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image"></div>
+                    <div class="text-container">
+                        <div class="product-name">Product Name</div>
+                        <div class="product-price">₱ 75.00</div>
+                        <div class="product-rating">4.5 stars (1000+ reviews)</div>
+                        <div class="action-buttons">
+                            <button id="addToCartBtn" class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                            <button id="removeFromCartBtn" class="remove-from-cart" style="display: none;">Added to Cart <i class="fas fa-trash"></i></button>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image"></div>
+                    <div class="text-container">
+                        <div class="product-name">Product Name</div>
+                        <div class="product-price">₱ 75.00</div>
+                        <div class="product-rating">4.5 stars (1000+ reviews)</div>
+                        <div class="action-buttons">
+                            <button id="addToCartBtn" class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                            <button id="removeFromCartBtn" class="remove-from-cart" style="display: none;">Added to Cart <i class="fas fa-trash"></i></button>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="product-image"></div>
+                    <div class="text-container">
+                        <div class="product-name">Product Name</div>
+                        <div class="product-price">₱ 75.00</div>
+                        <div class="product-rating">4.5 stars (1000+ reviews)</div>
+                        <div class="action-buttons">
+                            <button id="addToCartBtn" class="add-to-cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                            <button id="removeFromCartBtn" class="remove-from-cart" style="display: none;">Added to Cart <i class="fas fa-trash"></i></button>
+                
+                        </div>
+                    </div>
+                </div>       
+
+
+<style>
+
+
+
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.add-to-cart,
+.remove-from-cart,
+.delete-item {
+    padding: 10px;
+    margin-left: 80px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FAAC64;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.remove-from-cart,
+.delete-item {
+    background-color: red;
+}
+
+
+</style>
+
+<script>
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const removeFromCartButtons = document.querySelectorAll('.remove-from-cart');
+
+addToCartButtons.forEach((addToCartBtn, index) => {
+    addToCartBtn.addEventListener('click', () => {
+        addToCartBtn.style.display = 'none';
+        removeFromCartButtons[index].style.display = 'inline-block';
+    });
+
+    removeFromCartButtons[index].addEventListener('click', () => {
+        addToCartBtn.style.display = 'inline-block';
+        removeFromCartButtons[index].style.display = 'none';
+    });
+});
+</script>
+
+
+
+
+
+
+    </div>
+        </div>
 <script>
     function showForm(formId) {
         document.querySelectorAll('#content > div').forEach((form) => {
