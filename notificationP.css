@@ -285,7 +285,7 @@ body {
 
 .card-container {
     
-  margin-top: 110px;
+  margin-top: 30px;
   margin-left: -1%;
   display: flex;
   flex-wrap: wrap; /* This allows cards to wrap to the next row */
@@ -297,11 +297,12 @@ body {
 .card {
   height: 280px;
   width: 250px;
+  margin-top: -50px;
   background: white;
   border: 1px solid black;
   border-radius: .25rem;
   padding: .5rem;
-  margin: .5rem; /* Add margin to create space between cards */
+  margin: .5rem;
   transition: 150ms;
   display: flex;
   flex-direction: column;
