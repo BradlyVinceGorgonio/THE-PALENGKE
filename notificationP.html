@@ -19,88 +19,212 @@
 
 
 <div class="sidenav">
-    
     <div class="list">
-        <div id="navigate">Home > Notification </div>
-    <nav>
-    <a href="personaldata.html" style="font-size: 35px;">
 
-        <i class="fa fa-user-circle icon"></i>Jimmy Smith
-    </a>
 
-    <a href="personaldata.html">
-        <i class="fa fa-user icon"style="font-size: 20px;"></i>Personal Data
-    </a>
+        <a href="#" style="font-size: 35px;">
+             <i class="fa fa-user-circle icon"></i>Jimmy Smith
+        </a>
 
-    <a href="order.html">
+
+    <div class="menu-item">
+        <a href="#" onclick="showForm('form3')">
+            <i class="fa fa-user icon"style="font-size: 20px;"></i>Personal Data
+         </a>
+    </div>
+
+
+
+    <a href="#">
         <i class="fa fa-shopping-basket icon"style="font-size: 20px;"></i>Orders
     </a>
+
+
 
     <div class="menu-item">
         <a href="#" onclick="showForm('form1')">
             <i class="fa fa-bell icon" style="font-size: 25px; color: orange;"></i>Notification
         </a>
     </div>
+
+
+        <a href="#">
+            <i class="fa fa-heart icon" style="font-size: 20px;"></i> Wishlist
+        </a>
+
+
         <div class="menu-item" onclick="showForm('form2')">
             <a href="#">
-            <i class="fa fa-sellsy icon" style="font-size: 20px;"></i>Start Selling
-        </a>
+                <i class="fa fa-sellsy icon" style="font-size: 20px;"></i>Start Selling
+            </a>
+        </div>
+
+
+         <a href="#">
+            <i class="fa fa-sign-out icon"style="font-size: 20px;"></i>Log Out
+         </a>
     </div>
-    <a href="#">
-        <i class="fa fa-sign-out icon"style="font-size: 20px;"></i>Log Out
-    </a>
 </div>
-</div>
-</nav>
+
+
+/*NAV BAR TO SA BABA*/
+
+
+
 
 <div class="navbar">
     <div class="input-icons">
-        <input class="input-field" type="text" placeholder="Search">
+        <input class="input-field" type="search" placeholder="Search">
     </div>
+
     <div style="margin-right: -200px; font-size: 35px;">
-        
         <div class="circle" id="circle">
             <i class="fa-regular fa-user"></i>
         </div>
-        </div>
+    </div>
 
 </div>
    
 
 
 
+/*CONTENT TO */
+
+
+
 <div id="content">
+
+
+    <div id="form3" style="display: none;">
+        <div class="bodycontent">
+                <h1 style="margin-top: 80px; margin-left: 20px;">Identification</h1>
+                     <br>
+                <div class="personalbutton">
+                        <button type="button" onclick="toggleEdit()">Edit</button>
+                        <button type="button" onclick="saveEdit()" style="display: none;">Save</button>
+                 </div>
+                        <br>
+            <form>
+
+                <p style="margin-top: -40px;">
+                    <i class="fa fa-user" aria-hidden="true"></i> Full name:
+                </p>
+             <input type="text" placeholder="Full name" class="selling-ii" id="fullName" readonly>
+                <br><br><br>
+        
+                <p style="margin-top: -20px;">
+                    <i class="fa fa-phone" aria-hidden="true"></i> Phone number:
+                </p>
+                <input type="text" placeholder="01234567891" class="selling-ii" id="phoneNumber" readonly>
+                <br><br><br>
+        
+                <p style="margin-top: -20px;">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> Address:
+                </p>
+                <input type="text" placeholder="HubSpot, 25 First Street Starbucks" class="selling-ii" id="address" readonly>
+                <br><br><br>
+        
+                <p style="margin-top: -20px;">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>Email:
+                </p>
+                <input type="text" placeholder="Jimmy.smith1996@gmail.com" class="selling-ii" id="email" readonly>
+                <br><br><br>
+        
+                <p style="margin-top: -20px;">
+                    <i class="fa fa-lock" aria-hidden="true"></i>Password:
+                </p>
+                <input type="password" placeholder="********" class="selling-ii" id="password" readonly>
+                <br><br><br>
+        
+                <p style="margin-top: -20px;">
+                    <i class="fa fa-mail-bulk" aria-hidden="true"></i> Postal code:
+                </p>
+                <input type="text" placeholder="Postal Code" class="selling-ii" id="postalCode" readonly>
+                <br><br><br>
+        
+                
+            </form>
+        
+            <script>
+                let isEditing = false;
+        
+                function toggleEdit() {
+                    const inputFields = document.querySelectorAll('.selling-ii');
+                    const editButton = document.querySelector('button:nth-of-type(1)');
+                    const saveButton = document.querySelector('button:nth-of-type(2)');
+        
+                    if (!isEditing) {
+                        inputFields.forEach((field) => {
+                            field.readOnly = false;
+                        });
+                        editButton.style.display = 'none';
+                        saveButton.style.display = 'block';
+                        isEditing = true;
+                    } else {
+                        inputFields.forEach((field) => {
+                            field.readOnly = true;
+                        });
+                        editButton.style.display = 'block';
+                        saveButton.style.display = 'none';
+                        isEditing = false;
+                    }
+                }
+        
+                function saveEdit() {
+                    const inputFields = document.querySelectorAll('.selling-ii');
+                    const editButton = document.querySelector('button:nth-of-type(1)');
+                    const saveButton = document.querySelector('button:nth-of-type(2)');
+        
+                    inputFields.forEach((field) => {
+                        field.readOnly = true;
+                    });
+                    editButton.style.display = 'block';
+                    saveButton.style.display = 'none';
+                    isEditing = false;
+                }
+            </script>
+    
+        </div>
+    </div>
+
+
+
+
+
+
+
+
     <div id="form1" style="display: none;">
 
         <div class="bodycontent">
             <div style="margin-left: -370px; margin-top: -50px;">
-            <h1 style="margin-top: 155px; margin-left: 400px;" >Notification</h1>
-            <p style="margin-top: -15px; margin-left: 400px;">Manage your notification settings</p>
-            <i class="fa fa-envelope" aria-hidden="true" style="margin-top: 25px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Emails</p></i>
-            <p style="margin-top: -5px; margin-left: 400px;">We write emails to let you know<br> what's important, like: new order,<br> confirmations</p>
+                <h1 style="margin-top: 155px; margin-left: 400px;" >Notification</h1>
+                     <p style="margin-top: -15px; margin-left: 400px;">Manage your notification settings</p>
+                     <i class="fa fa-envelope" aria-hidden="true" style="margin-top: 25px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Emails</p></i>
+                    <p style="margin-top: -5px; margin-left: 400px;">We write emails to let you know<br> what's important, like: new order,<br> confirmations</p>
          
          
             <div style="margin-left: 800px; margin-top: -100px;">
                 <i class="fa fa-truck" aria-hidden="true">
                     <p style="margin-top: -15px; margin-left: 20px;">Order Delivered</p>
                 </i>
-                <p style="margin-top: -5px;">You will be noticed once <br>the order is delivered</p>
+                    <p style="margin-top: -5px;">You will be noticed once <br>the order is delivered</p>
             </div>
         
-        
-        <i class="fa fa-envelope-open" aria-hidden="true" style="margin-top: 100px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Push to your Device</p></i>
-            <p style="margin-top: -5px; margin-left: 400px;"> Recieve notification about your order <br>status, promotions and other updates</p>
+
+                     <i class="fa fa-envelope-open" aria-hidden="true" style="margin-top: 100px; margin-left: 400px;"><p style="margin-top: -15px; margin-left: 20px;">Push to your Device</p></i>
+                     <p style="margin-top: -5px; margin-left: 400px;"> Recieve notification about your order <br>status, promotions and other updates</p>
         
             <div style="margin-left: 800px; margin-top: -80px;">
-                <i class="fa fa-life-ring" aria-hidden="true"><p style="margin-top: -15px; margin-left: 20px;">Product's availability</p></i>
-                <p style="margin-top: -5px;">You will be noticed when <br>product gets available</p>
+                     <i class="fa fa-life-ring" aria-hidden="true"><p style="margin-top: -15px; margin-left: 20px;">Product's availability</p></i>
+                     <p style="margin-top: -5px;">You will be noticed when <br>product gets available</p>
             </div>
         
         
         <div style="margin-left: 680px; margin-top: -90px;">
-        <label class="switch">
-            <input type="checkbox" checked>
-            <span class="slider round"></span>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
           </label>
         </div>
         
@@ -149,20 +273,20 @@
             <form class="formin1">
     <i class="fa fa-upload" aria-hidden="true" style="font-size: 30px; margin-left: 20px; margin-top: 10px;">
       <button class="button">
-        UPLOAD</button></i>
+        UPLOAD
+      </button></i>
            </form>
    
            <div class="selling">
-           <input type="text" placeholder="TITLE" class="selling-i"><br><br><br>
-           <input type="text" placeholder="PRICE" class="selling-i"><br><br><br>
-           <input type="text" placeholder="CATEGORY" class="selling-i"><br><br><br>
-           <textarea placeholder="DESCRIPTION" class="selling-i" style="height: 300px;"></textarea>
+            <input type="text" placeholder="TITLE" class="selling-i"><br><br><br>
+            <input type="text" placeholder="PRICE" class="selling-i"><br><br><br>
+            <input type="text" placeholder="CATEGORY" class="selling-i"><br><br><br>
+            <textarea placeholder="DESCRIPTION" class="selling-i" style="height: 300px;"></textarea>
         </div>
         </div>
-
-
-
     </div>
+
+
 <script>
     function showForm(formId) {
         document.querySelectorAll('#content > div').forEach((form) => {
@@ -171,6 +295,14 @@
         document.getElementById(formId).style.display = 'block';
     }
 </script>
+
+
+
+
+
+
+
+
 
 </body>
 </html>
