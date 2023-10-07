@@ -281,3 +281,62 @@ body {
     color: white;
 }
 
+
+
+.card-container {
+    
+  margin-top: 110px;
+  margin-left: -1%;
+  display: flex;
+  flex-wrap: wrap; /* This allows cards to wrap to the next row */
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start; /* Optional: Align the cards to the left */
+}
+
+.card {
+  height: 280px;
+  width: 250px;
+  background: white;
+  border: 1px solid black;
+  border-radius: .25rem;
+  padding: .5rem;
+  margin: .5rem; /* Add margin to create space between cards */
+  transition: 150ms;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  margin-top: 20%;
+  width: 100%;
+  height: 200px;
+  background-image: url('tocino.png'); /* Use the correct filename and extension */
+  background-size: cover;
+  background-position: center;
+}
+
+.text-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #FF9900; /* Amazon orange color */
+}
+
+.product-rating {
+  font-size: 14px;
+  color: #888; /* Gray color for rating */
+}
+
