@@ -27,18 +27,15 @@ document.addEventListener("click", function(event) {
         dropdownContent.style.display = "none";
     }
 });
-
-
-
-
 function toggle()
 {
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
     
 
-    var popup = document.getElementById('container');
+    var popup = document.getElementById('popup');
     popup.classList.toggle('active');
+
 
 }
 const container = document.getElementById('container');
@@ -54,3 +51,5 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 
 });
+
+

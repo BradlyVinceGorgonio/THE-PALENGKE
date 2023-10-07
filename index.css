@@ -271,35 +271,18 @@ nav{
 }
 #popup.active
 {
-    top: 50%;
-    visibility: visible;
+    visibility: visible; /* Make the div visible when active */
     opacity: 1;
-    transform: 0.5s;
+    transition: opacity 0.5s; /* Transition opacity */
 }
 #popup
 {
     position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 600px;
-    height: 626px;
-    flex-shrink: 0;
-    padding: 50px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    visibility: hidden;
+    visibility: hidden; /* Initially hidden */
     opacity: 0;
-    transition: 0.5;
-    border-radius: 8px;
 }
-#blur.active{
-    filter: blur(20px);
-    pointer-events: none;
-    user-select: none;
-}
-#container {
-    background-color: #fff;
+.container {
+    background-color: #DDEEDF;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: fixed;
@@ -310,40 +293,29 @@ nav{
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    visibility: hidden; /* Initially hidden */
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s; /* Only transition opacity */
 }
-
-#container.active {
-    visibility: visible; /* Make the div visible when active */
-    opacity: 1;
-    transition: opacity 0.5s; /* Transition opacity */
-}
-
-
-
-#container p{
+.container p{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
-
-#container span{
+.container span{
     font-size: 12px;
 }
 
-#container a{
-    color: #333;
+.container a{
+    color: #FAAC64;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
 
-#container button{
-    background-color: #000000;
-    color: #fff;
+.container button{
+    background-color: #DDEEDF;
+    color: #FAAC64;
     font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
@@ -352,16 +324,29 @@ nav{
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 10px;
+    border: 3px solid #FAAC64;
+    border-radius: 15px;
+    transition: transform 0.5s, background-color 0.5s, color 0.5s;
     cursor: pointer;
 }
-
-#container button.hidden{
-    background-color: transparent;
-    border-color: #fff;
+button:hover
+{
+   transform: translateY(-10px);
+   background-color: #FAAC64;
+   color: rgb(255, 238, 255);
 }
 
-#container form{
-    background-color: #fff;
+.container button.hidden{
+
+    border-color: #FAAC64;
+}
+.container button.hidden:hover{
+    background-color: #FAAC64;
+    border-color: #FAAC64;
+}
+
+.container form{
+    background-color: #DDEEDF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -370,8 +355,8 @@ nav{
     height: 100%;
 }
 
-#container input{
-    background-color: #eee;
+.container input{
+    background-color: #ffffff;
     border: none;
     margin: 8px 0;
     padding: 10px 15px;
@@ -394,7 +379,7 @@ nav{
     z-index: 2;
 }
 
-#container.active .sign-in{
+.container.active .sign-in{
     transform: translateX(100%);
 }
 
@@ -405,7 +390,7 @@ nav{
     z-index: 1;
 }
 
-#container.active .sign-up{
+.container.active .sign-up{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -428,7 +413,7 @@ nav{
 }
 
 .social-icons a{
-    border: 1px solid #ccc;
+    border: 1px solid #FAAC64;
     border-radius: 20%;
     display: inline-flex;
     justify-content: center;
@@ -450,16 +435,16 @@ nav{
     z-index: 1000;
 }
 
-#container.active .toggle-container{
+.container.active .toggle-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #FAAC64;
     height: 100%;
-    background: linear-gradient(to right, #000000 , #000000 );
-    color: #fff;
+    background: linear-gradient(to right, #FFE3B7 , #FFE3B7);
+    color: #000000;
     position: relative;
     left: -100%;
     height: 100%;
@@ -468,7 +453,7 @@ nav{
     transition: all 0.6s ease-in-out;
 }
 
-#container.active .toggle{
+.container.active .toggle{
     transform: translateX(50%);
 }
 
@@ -491,7 +476,7 @@ nav{
     transform: translateX(-200%);
 }
 
-#container.active .toggle-left{
+.container.active .toggle-left{
     transform: translateX(0);
 }
 
@@ -500,6 +485,6 @@ nav{
     transform: translateX(0);
 }
 
-#container.active .toggle-right{
+.container.active .toggle-right{
     transform: translateX(200%);
 }
