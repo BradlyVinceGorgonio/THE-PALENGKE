@@ -285,8 +285,9 @@ body {
 
 .card-container {
     
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: -1%;
+  position: fixed;
   display: flex;
   flex-wrap: wrap; /* This allows cards to wrap to the next row */
   gap: 1rem;
