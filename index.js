@@ -1,3 +1,4 @@
+// Cannoot use import in server and web at the same time - import {createUser} from './database.js';
 // Get references to the circle and popup-form elements
 const circle = document.getElementById('circle');
 const popupForm = document.getElementById('popupForm');
@@ -53,3 +54,27 @@ loginBtn.addEventListener('click', () => {
 });
 
 
+function registerUser() {
+    const name = document.getElementById('registerName').value;
+    const email = document.getElementById('registerEmail').value;
+    const password = document.getElementById('registerPassword').value;
+
+    // Add user to the client-side "database"
+    createUser(name, email, password);
+    
+    console.log('Success');
+}
+
+function loginUser() {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Check if the user exists in the client-side "database"
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if (user) {
+        document.getElementById('message').textContent = `Welcome, ${user.name}! You are logged in.`;
+    } else {
+        document.getElementById('message').textContent = 'Invalid email or password.';
+    }
+}       
