@@ -37,11 +37,11 @@
 
 
 
-    <a href="#">
+    <div class="menu-item">
+        <a href="#" onclick="showForm('form5')">
         <i class="fa fa-shopping-basket icon"style="font-size: 20px;"></i>Orders
     </a>
-
-
+</div>
 
     <div class="menu-item">
         <a href="#" onclick="showForm('form1')">
@@ -93,6 +93,89 @@
 
 
 <div id="content">
+
+
+
+    <div id="form5" style="display: none;">
+        <div class="bodycontent">
+            <style>
+               
+                
+                h1 {
+                    font-size: 24px;
+                    margin: 20px 0;
+                }
+                p {
+                    font-size: 14px;
+                    color: #777;
+                }
+                .order-status {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                }
+                .order-status a {
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    text-align: center;
+                    width: 100px;
+                    cursor: pointer;
+                }
+                .order-status a:hover {
+                    background-color: orange;
+                    color: white;
+                }
+                .order-details {
+                    display: none;
+                    margin-top: 20px;
+                }
+                .order-details label {
+                    font-weight: bold;
+                }
+            </style>
+        
+            <h1>Order History</h1>
+            <p>Track, return, or purchase items</p>
+        
+            <div class="order-status">
+                <a href="#" id="current-link">Current</a>
+                <a href="#" id="delivered-link">Delivered</a>
+                <a href="#" id="canceled-link">Canceled</a>
+                <a href="#" id="returned-link">Returned</a>
+            </div>
+        
+            <div class="order-details" id="current-details">
+                <form>
+                    <label for="order-code">Order Code:</label>
+                    <span id="order-code">1232151</span><br>
+                    <label for="place-on">Placed On:</label>
+                    <span id="place-on">2023/23/12</span><br>
+                    <label for="total">Total:</label>
+                    <span id="total">$504.92</span><br>
+                    <label for="sent-to">Sent To:</label>
+                    <span id="sent-to">Jimmy Smith</span>
+                </form>
+            </div>
+        
+        
+            <script>
+                const currentLink = document.getElementById("current-link");
+                const currentDetails = document.getElementById("current-details");
+        
+                currentLink.addEventListener("click", function() {
+                    // Hide other details if visible
+                    // You can add similar code for other status links and details
+                    currentDetails.style.display = "block";
+                });
+            </script>
+        <h1 style="margin-top: -635px; font-size: 20px; margin-left: -173px; color: orange;">> Start Selling</h1>
+        </div>
+ 
+    </div>
 
 
 
@@ -393,6 +476,16 @@
                 </div>
               
                 </div>
+
+
+
+
+                
+    
+
+
+
+
            
 
 
