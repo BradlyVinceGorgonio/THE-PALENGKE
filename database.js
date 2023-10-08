@@ -41,5 +41,5 @@ export async function createUser(username, password, email)
     return getUser(username)
 }
 
-const user = await createUser("nyoging", "passwordt123", "tae@gmail.com") ;
-console.log(user);
+// const user = await createUser("nyoging", "passwordt123", "tae@gmail.com") ;
+// console.log(user);
