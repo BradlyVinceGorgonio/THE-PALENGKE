@@ -2,7 +2,7 @@ import express from 'express'
 import jwt from 'jsonwebtoken';
 import cors from 'cors'; //CORS
 
-import {createUser, getUser, getUsers} from './database.js';
+import {createUser, getUser, getUsers, checkCredentials} from './database.js';
 
 const app = express()
 app.use(cors()); //CORS
@@ -25,12 +25,34 @@ app.post("/register", async (req, res) => {
     res.json({ accessToken: accessToken, user: user });
 })
 
+// * /login creates a jwt token to return to the client side when they fetch the endpoint
+//TUser is just to add it to an object
+// ! Json body should have email , password
+app.post('/login', async(req, res) =>
+{ 
+    //Authenticate the User
+    const {Email, Password} = req.body //Gets email and pass from json file
+    const Tuser = await checkCredentials(Email, Password)
+    const user = {name: Tuser}
+
+    if (Tuser.error) {
+      return res.status(401).json({ accessToken: 'invalid' });
+    }
+    else{
+      //After checking login, now creates a token
+    const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET) 
+
+    res.json({accessToken : accessToken}) 
+    }
+})
+
+
 
 
 app.get('/get-user-data', authenticateToken, async(req, res) => {
     const authenticatedUsername = req.user.name; //authenticatedUsername is the username from the decrypt token
     const users = await getUsers()  // * Gets all username from db to verify the jwt username
-    const userPreferences = users.filter(player => player.username === authenticatedUsername); //Verifies if db username == jwt username
+    const userPreferences = users.filter(player => player.Username === authenticatedUsername); //Verifies if db username == jwt username
     res.json(userPreferences); // ! If jwt username != db username - returns [empty] array
   }); 
   
@@ -56,10 +78,6 @@ function authenticateToken(req, res, next)
         next()
     })
 }
-
-
-
-
 
 
 //error message 

@@ -41,5 +41,30 @@ export async function createUser(username, password, email)
     return getUser(username)
 }
 
+
+export async function checkCredentials(Email, Password) {
+    const connection = await pool.getConnection(); // Get a connection from the pool
+  
+    try {
+      const [rows] = await connection.query(`
+        SELECT * 
+        FROM Users
+        WHERE Email = ? AND Password = ?
+      `, [Email, Password]);
+  
+      const user = rows[0];
+  
+      if (!user) {
+        return { error: 'Invalid email or password' };  
+      }
+  
+      // If the email and password are correct, return the username
+      return user.Username;
+    } finally {
+      connection.release(); // Release the connection back to the pool
+    }
+  }
+  
+
 // const user = await createUser("nyoging", "passwordt123", "tae@gmail.com") ;
 // console.log(user);
